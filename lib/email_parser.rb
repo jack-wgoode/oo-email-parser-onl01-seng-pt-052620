@@ -12,8 +12,7 @@ class EmailAddressParser
   end
   
   def parse
-    @list_of_emails = list_of_emails
-    self.list_of_emails.split(",")
+    @list_of_emails.split(",")
   end
   
   
