@@ -12,8 +12,10 @@ class EmailAddressParser
   end
   
   def parse
-    parsed_array = @list_of_emails.split(",")
-    parsed_array
+    @list_of_emails.split.collect do |email_address|
+      email_address.split(",")
+    end
+    .flatten.uniq   ##flatten new array(collect) remove dupes
   end
   
   
